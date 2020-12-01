@@ -34,8 +34,6 @@ public class Student_CPOM2
         s2.id = s1.id;
         s2.name = s1.name;
         s1.display();
-        s2.display();
-        
-        
+        s2.display();   
     }
 }
