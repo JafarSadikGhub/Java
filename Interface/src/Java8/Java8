@@ -1,0 +1,8 @@
+Since Java 8, we can have method body in interface. But we need to make
+it default method.
+
+Since Java 8, we can have static method in interface.
+
+Java Interface also represents IS-A relationship.
+
+It cannot be instantiated just like abstract class.
