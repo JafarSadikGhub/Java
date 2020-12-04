@@ -20,9 +20,20 @@ interface Drawable
     {
         System.out.println("Default method...");
     }
-    static int cube(int y)
+//    default int cube(int y)
+//    {
+//        return y*y*y;
+//        //Driver File: d.cube(3);
+//    }
+//    static int cube(int y)
+//    {
+//        return y*y*y;
+//        //Driver File: Drawable.cube(3);
+//    }
+    public static int cube(int y)
     {
         return y*y*y;
+        //Driver File: Drawable.cube(3);
     }
 }
 class Rectangle implements Drawable
