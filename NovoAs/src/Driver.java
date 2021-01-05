@@ -26,11 +26,11 @@ public class Driver {
         
     }
     System.out.println("Maximum CGPA: " + maxCGPA);
-    
+    //System.out.println(Person.petName);
     
         
     
     
     }
-    
+       
 }

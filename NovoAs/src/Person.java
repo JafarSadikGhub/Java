@@ -1,5 +1,5 @@
 public class Person {
-private String firstName;
+//public static String petName;
 private String lastName;
 private int age;
 protected String nationalID;
