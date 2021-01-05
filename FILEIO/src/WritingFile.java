@@ -39,7 +39,7 @@ public class WritingFile
         }
         //Creating an object of FileWriter
         FileWriter myFileWriter = new FileWriter("amarfile.txt");
-        myFileWriter.write("Created from program!");
+        myFileWriter.write("Created from program!\nNew Line.");
         myFileWriter.close();
          System.out.println("File size in bytes: "  + myFile.length());
       }
