@@ -65,8 +65,10 @@ import java.util.Scanner;
              Scanner input = new Scanner(System.in);
              while(true)
              {
-                 System.out.println("\n\nWelcome to the System!\nPlease Press '1' only to Post the text with date."
-                     + "\nPress '2' Post the text with attachment file and date.\nPress 'x' to exit this prompt!");
+                 System.out.println("\n-----------------------------------\n"
+                         + "Welcome to the System!\nPlease Press '1' only to Post the text with date."
+                     + "\nPress '2' Post the text with attachment file and date.\nPress 'x' to exit this prompt!"
+                         + "\n-----------------------------------\n");
                  inp = input.nextLine();
                  if("1".equals(inp))
                  {

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 /**
  *
@@ -59,51 +55,49 @@ class ExceptionConditionImplementations
    
     public static boolean isScamFile(String scamCheck)
     {
-      boolean ret = true;
+      boolean ret = false;
         for (int i = 0; i < scamFiles.length; i++)
         {
-            if (scamFiles[i] == scamCheck)
+            if (scamFiles[i] == null ? scamCheck == null : scamFiles[i].equals(scamCheck))
             {
+                
+               // break;
                 ret = true;
                 break;
-                
             }
-            else 
-                ret = false;
+            
             
         }
         return ret;
     }
     public static boolean isCorruptedFile(String corruptedCheck)
     {
-      boolean ret = true;
+      boolean ret = false;
         for (int i = 0; i < corruptedFiles.length; i++)
         {
-            if (corruptedFiles[i] == corruptedCheck)
+            if (corruptedFiles[i] == null ? corruptedCheck == null : corruptedFiles[i].equals(corruptedCheck))
             {
                 ret = true;
                 break;
                 
             }
-            else 
-                ret = false;
+            
             
         }
         return ret;
     }
     public static boolean isVirusFile(String virusCheck)
     {
-      boolean ret = true;
+      boolean ret = false;
         for (int i = 0; i < virusFiles.length; i++)
         {
-            if (virusFiles[i] == virusCheck)
+            if (virusFiles[i] == null ? virusCheck == null : virusFiles[i].equals(virusCheck))
             {
                 ret = true;
                 break;
                 
             }
-            else 
-                ret = false;
+           
             
         }
         return ret;
@@ -124,7 +118,7 @@ class ExceptionConditionImplementations
         boolean ret = false;
         //boolean dateValid = false;
         //boolean monthValid 
-        if((dd>=1 || dd<=31) && (mm>=1 || mm<=12) && yyyy.length()==4)
+        if((dd>=1 && dd<=31) && (mm>=1 && mm<=12) && yyyy.length()==4)
         {
             dateString = dd + "-" + mm + "-" + yyyy;
             ret = true;
