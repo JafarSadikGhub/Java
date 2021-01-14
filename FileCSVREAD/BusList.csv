@@ -1,0 +1,34 @@
+﻿From,to,Root,Bus ID,Bus Name,Time,Fare
+Dhaka,Ctg,1,011SK,Sky Line,8:00 AM,700tk
+Dhaka,Khulna,4,041SA,Saudia Paribahan,7:00am,400tk  
+Dhaka,Sylhet,2,021SR,SR Travels,9:00 AM,500tk 
+Dhaka,Ctg,1,012SK,Sky Line,11:00 AM,700tk
+Dhaka,Barishal,6,061SP,Saudia Paribahan,1:00pm,900tk
+Dhaka,comilla,2,022EN,ENA,10:00am,200tk
+Khulna,Dhaka,7,071EN,ENA,11:00 AM,400tk
+Dhaka,Ctg,1,013SK,Sky Line,1:00 PM,700tk
+Dhaka,Sylhet,2,023EA,Eagle Paribahan,11:00am,500tk
+Dhaka,Khulna,3,031EA,Eagle Paribahan,8:00 AM,300tk
+Dhaka,Rajshahi,5,051DH,Dhaka Express,5:00pm,600tk
+Dhaka,Comilla,8,081AC,AC DElux,6:00am,250tk
+Dhaka,Khulna,3,032HA,Hanif,10:00am,400tk
+Dhaka,Barishal,1,014GR,Green Line,2:30pm,900tk
+Dhaka,Barishal,2,024ST,Star Line,3:00 PM,800tk
+Barishal,Dhaka,3,033GR,Green Line,12:00 PM,850tk
+Ctg,Dhaka,7,072RO,Royal Coach,3:00 PM,700tk
+Comilla,Dhaka,8,082NT,National Travels,10:00am,200tk
+Ctg,Dhaka,1,015HA,Hanif,4:00 PM,800tk
+Dhaka,comilla,8,083EN,ENA,12:00pm,200tk
+Dhaka,Ctg,5,052SL,Start Line,10:00pm,700tk
+Dhaka,Sylhet,4,042SA,Sky Line,5:00 PM,400tk
+Dhaka,Barishal,3,034SE,Sealine,4:00pm,800tk
+Dhaka,Ctg,1,016PO,Porjotok,7:00 PM,600TK
+Dhaka,Khulna,2,025GR,Green Line,7:00 PM,500tk
+Dhaka,Khulna,7,073MO,Mohanogor,5:00pm,400tk
+Khulna,Dhaka,8,084EN,Padma Enterprise,8:00pm,450tk
+Dhaka,Khulna,5,053DE,Dhaka Express,11:00pm,750Tk
+Ctg,Dhaka,1,017DH,Dhaka Express,8:00pm,780tk
+Dhaka,Ctg,8,085EN,Dhaka Express,7:00pm,700tk
+Dhaka,Ctg,7,074DH,Dhaka Express,9:00pm,700tk
+Dhaka,Sylhet,2,026GR,Green Line,8:00pm,700tk
+Dhaka,Sylhet,6,062GR,Green Line,3:00pm,500tk
