@@ -72,5 +72,11 @@ public class BusInformation
     {
         this.fare = fare;
     }
+    //route, busID, busName, time, fare;
+    @Override
+    public String toString()
+    {
+        return "From: " + this.from + ", To: " + this.to + ", Bus name: " + this.busName + ", Time: " + this.time + ", Fare: " + this.fare;  
+    }
   
 }
