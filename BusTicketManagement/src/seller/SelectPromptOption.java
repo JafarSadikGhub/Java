@@ -27,10 +27,10 @@ public class SelectPromptOption
     Scanner input = new Scanner(System.in);
     String adminPWD = " ";
     String fixedPWD = "qwerty1234";
-    String cName, cContact, date, time, busName;
+    String cName, cContact, date, time, busName, busCode;
     String busFare;
     //String inputOption;
-    String cFrom, cTo;
+    String cFrom, cTo, seatNo;
 
     public SelectPromptOption()
     {
@@ -41,6 +41,11 @@ public class SelectPromptOption
     public void setCName(String cName)
     {
         this.cName = cName;
+    }
+
+    public void setSeatNo(String seatNo)
+    {
+        this.seatNo = seatNo;
     }
 
     public void setBusName(String busName)
@@ -102,6 +107,11 @@ public class SelectPromptOption
     public String getBusName()
     {
         return this.busName;
+    }
+
+    public String getSeatNo()
+    {
+        return this.seatNo;
     }
 
     public void readFileFrom() throws IOException
@@ -254,6 +264,43 @@ public class SelectPromptOption
         {
             this.busFare = busInfoBusFare.get(i);
             System.out.println("Fare: " + busInfoBusFare.get(i) + "\nConfirm[Y / N] ?");
+
+        }
+
+    }
+
+    public void readFileBusCode()
+            throws FileNotFoundException, IOException, CsvValidationException
+    {
+        CSVReader reader = new CSVReader(new FileReader("BusList.csv"));
+        String[] nextLine;
+        int columnIndexOfFrom = 0;
+        int columnIndexOfTo = 1;
+        int columnIndexOfTime = 5;
+        int columnIndexOfBusName = 4;
+        ArrayList<String> busInfoBusCode = new ArrayList<>();
+        int size = busInfoBusCode.size();
+        while ((nextLine = reader.readNext()) != null)
+        {
+            String contentTo = null;
+            if ((nextLine[columnIndexOfFrom].matches(this.cFrom))
+                    && (nextLine[columnIndexOfTo].matches(this.cTo))
+                    && (nextLine[columnIndexOfTime].matches(this.time))
+                    && (nextLine[columnIndexOfBusName].matches(this.busName)))
+            {
+                if (!busInfoBusCode.contains(nextLine[6]))
+                {
+                    busInfoBusCode.add(nextLine[6]);
+                    //System.out.println("here");
+                }
+            }
+
+        }
+        size = busInfoBusCode.size();
+        for (int i = 0; i < size; i++)
+        {
+            this.busCode = busInfoBusCode.get(i);
+            //System.out.println("Fare: " + busInfoBusCode.get(i) + "\nConfirm[Y / N] ?");
 
         }
 

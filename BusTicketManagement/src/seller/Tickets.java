@@ -43,7 +43,11 @@ public class Tickets extends SelectPromptOption
                 + "\t\t\t\tPassenger name: " + super.getCName() + "\t\t\t\t"
                 + "\n\t\t\t\tContact no: " + super.getCContact() + "\t\t\t\t\n"
                 + "\t\t\t\tDate Issued: " + this.time_t + "\t\t\t\t\n"
-                + "\t\t\t\tBus Name: " + super.);
+                + "\t\t\t\tBus Name: " + super.getBusName() + " - " + super.busCode + "\t\t\t\t\n"
+                + "\t\t\t\t" + super.getCFrom() + " - " + super.getCTo() + "\t\t\t\t\n"
+                + "\t\t\t\tTravel Date: " + super.getDate() + "\t\t\t\t\n"
+                + "\t\t\t\tFare: Tk. " + this.busFare + "\t\t\t\t\n"
+                + "\t\t\t\tSeat No: " + this.seatNo + "\t\t\t\t\n");
 
     }
 

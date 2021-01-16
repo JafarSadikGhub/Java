@@ -80,10 +80,15 @@ public class DriverClass
                 spo.setBusName(bus);
 
                 spo.readFileBusFare();
+                spo.readFileBusCode();
 
                 System.out.println("Please Enter a date you want to travel: ");
                 date = input.nextLine();
                 spo.setDate(date);
+
+                System.out.println("Select the seat number(1-50): ");
+                String seat = input.nextLine();
+                spo.setSeatNo(seat);
 
                 String confirm = null;
                 confirm = input.nextLine();
