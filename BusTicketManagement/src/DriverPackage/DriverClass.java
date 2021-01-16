@@ -69,11 +69,35 @@ public class DriverClass
                 String to = input.nextLine();
                 spo.setCTo(to);
 
-                System.out.println("Enter your date: ");
-                date = input.nextLine();
-                System.out.println("Enter your time: ");
+                System.out.println("Enter your time?\nType one of the below:  ");
+                spo.readFileTime();
                 time = input.nextLine();
+                spo.setTime(time);
 
+                System.out.println("Please Select the bus. Type one of the below: ");
+                spo.readFileBusName();
+                String bus = input.nextLine();
+                spo.setBusName(bus);
+
+                spo.readFileBusFare();
+
+                System.out.println("Please Enter a date you want to travel: ");
+                date = input.nextLine();
+                spo.setDate(date);
+
+                String confirm = null;
+                confirm = input.nextLine();
+                if (confirm.equals("y") || confirm.equals("Y"))
+                {
+                    //Code for print ticket
+                } else
+                {
+                    break;
+                }
+
+//                System.out.println("Enter your date: ");
+//                date = input.nextLine();
+//                spo.setDate(date);
             } else if (inputOption == 'X' || inputOption == 'x')
             {
                 break;

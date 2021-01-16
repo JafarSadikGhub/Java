@@ -27,7 +27,8 @@ public class SelectPromptOption
     Scanner input = new Scanner(System.in);
     String adminPWD = " ";
     String fixedPWD = "qwerty1234";
-    String cName, cContact, date, time;
+    String cName, cContact, date, time, busName;
+    String busFare;
     //String inputOption;
     String cFrom, cTo;
 
@@ -40,6 +41,11 @@ public class SelectPromptOption
     public void setCName(String cName)
     {
         this.cName = cName;
+    }
+
+    public void setBusName(String busName)
+    {
+        this.busName = busName;
     }
 
     public void setCContact(String cContact)
@@ -57,10 +63,47 @@ public class SelectPromptOption
         this.cTo = cTo;
     }
 
-//        SelectPromptOption(int index)
-//        {
-//            SelectPromptOption.index = index;
-//        }
+    public void setTime(String time)
+    {
+        this.time = time;
+    }
+
+    public void setDate(String date)
+    {
+        this.date = date;
+    }
+
+    //getters
+    public String getCName()
+    {
+        return this.cName;
+    }
+
+    public String getCContact()
+    {
+        return this.cContact;
+    }
+
+    public String getDate()
+    {
+        return this.date;
+    }
+
+    public String getCFrom()
+    {
+        return this.cFrom;
+    }
+
+    public String getCTo()
+    {
+        return this.cTo;
+    }
+
+    public String getBusName()
+    {
+        return this.busName;
+    }
+
     public void readFileFrom() throws IOException
     {
         ArrayList<String> busInfoCol = new ArrayList<>();
@@ -113,6 +156,105 @@ public class SelectPromptOption
         for (int i = 0; i < size; i++)
         {
             System.out.println(i + 1 + ". " + busInfoTo.get(i));
+        }
+
+    }
+
+    public void readFileTime()
+            throws FileNotFoundException, IOException, CsvValidationException
+    {
+        CSVReader reader = new CSVReader(new FileReader("BusList.csv"));
+        String[] nextLine;
+        int columnIndexOfFrom = 0;
+        int columnIndexOfTo = 1;
+        ArrayList<String> busInfoTime = new ArrayList<>();
+        int size = busInfoTime.size();
+        while ((nextLine = reader.readNext()) != null)
+        {
+            String contentTo = null;
+            if ((nextLine[columnIndexOfFrom].matches(this.cFrom)) && (nextLine[columnIndexOfTo].matches(this.cTo)))
+            {
+                if (!busInfoTime.contains(nextLine[5]))
+                {
+                    busInfoTime.add(nextLine[5]);
+                }
+            }
+
+        }
+        size = busInfoTime.size();
+        for (int i = 0; i < size; i++)
+        {
+            System.out.println(i + 1 + ". " + busInfoTime.get(i));
+        }
+
+    }
+
+    public void readFileBusName()
+            throws FileNotFoundException, IOException, CsvValidationException
+    {
+        CSVReader reader = new CSVReader(new FileReader("BusList.csv"));
+        String[] nextLine;
+        int columnIndexOfFrom = 0;
+        int columnIndexOfTo = 1;
+        int columnIndexOfTime = 5;
+        ArrayList<String> busInfoBusName = new ArrayList<>();
+        int size = busInfoBusName.size();
+        while ((nextLine = reader.readNext()) != null)
+        {
+            String contentTo = null;
+            if ((nextLine[columnIndexOfFrom].matches(this.cFrom))
+                    && (nextLine[columnIndexOfTo].matches(this.cTo))
+                    && (nextLine[columnIndexOfTime].matches(this.time)))
+            {
+                if (!busInfoBusName.contains(nextLine[4]))
+                {
+                    busInfoBusName.add(nextLine[4]);
+                    //System.out.println("here");
+                }
+            }
+
+        }
+        size = busInfoBusName.size();
+        for (int i = 0; i < size; i++)
+        {
+            System.out.println(i + 1 + ". " + busInfoBusName.get(i));
+        }
+
+    }
+
+    public void readFileBusFare()
+            throws FileNotFoundException, IOException, CsvValidationException
+    {
+        CSVReader reader = new CSVReader(new FileReader("BusList.csv"));
+        String[] nextLine;
+        int columnIndexOfFrom = 0;
+        int columnIndexOfTo = 1;
+        int columnIndexOfTime = 5;
+        int columnIndexOfBusName = 4;
+        ArrayList<String> busInfoBusFare = new ArrayList<>();
+        int size = busInfoBusFare.size();
+        while ((nextLine = reader.readNext()) != null)
+        {
+            String contentTo = null;
+            if ((nextLine[columnIndexOfFrom].matches(this.cFrom))
+                    && (nextLine[columnIndexOfTo].matches(this.cTo))
+                    && (nextLine[columnIndexOfTime].matches(this.time))
+                    && (nextLine[columnIndexOfBusName].matches(this.busName)))
+            {
+                if (!busInfoBusFare.contains(nextLine[6]))
+                {
+                    busInfoBusFare.add(nextLine[6]);
+                    //System.out.println("here");
+                }
+            }
+
+        }
+        size = busInfoBusFare.size();
+        for (int i = 0; i < size; i++)
+        {
+            this.busFare = busInfoBusFare.get(i);
+            System.out.println("Fare: " + busInfoBusFare.get(i) + "\nConfirm[Y / N] ?");
+
         }
 
     }
