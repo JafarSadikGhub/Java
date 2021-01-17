@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: a				
+				Contact no: null				
+				Date Issued: 2021-01-18 03:10:56.535				
+				Bus Name: Hanif - 900tk				
+				Dhaka - Ctg				
+				Travel Date: 1				
+				Fare: Tk. 900tk				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

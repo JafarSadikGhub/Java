@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Sadiat Mimpa				
+				Contact no: 01760379337				
+				Date Issued: 2021-01-18				
+				Bus Name: Sky Line - 700tk				
+				Dhaka - Ctg				
+				Travel Date: 12/13/17				
+				Fare: Tk. 700tk				
+				Seat No: 25				
+
+			------------------------------------------------------------------			

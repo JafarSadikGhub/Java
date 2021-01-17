@@ -60,6 +60,7 @@ public class DriverClass
 
                 System.out.println("Your contact number: ");
                 cContact = input.nextLine();
+                spo.setCContact(cContact);
 
                 System.out.println("From Where you want to start journey?\nType any one from below: ");
                 spo.readFileFrom();

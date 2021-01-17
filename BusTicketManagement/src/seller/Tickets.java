@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -19,63 +20,29 @@ import java.sql.Timestamp;
 public class Tickets extends SelectPromptOption
 {
 
-    Date date = new Date();
-    String time_t = new Timestamp(date.getTime()).toString();
-    String fileName = super.getCName() + time_t;
-
+    //Date date = new Date();
+    //String time_t = new Timestamp(date.getTime()).toString();
+    //String fileName = super.getCName() + time_t;
     public Tickets()
     {
         super();
     }
 
-    public String getFileName()
+    public String toDate(long timestamp)
     {
-        return this.fileName;
+        Date date = new Date(timestamp);
+        return new SimpleDateFormat("yyyy-MM-dd").format(date);
     }
 
     public void makePrintableTicket(SelectPromptOption spo) throws IOException
     {
-//        String fName = getFileName();
-//        File ticketName = new File("D:\\tickets\\user.txt");
-//        ticketName.mkdirs();
-//
-//        /*if (ticketName.createNewFile())
-//        {
-//            System.out.println("File Created: " + ticketName.getName());
-//        } else
-//        {
-//            System.out.println("File already exists!");
-//        }*/
-//        ticketName.createNewFile();
-//        System.out.println("\t\t\t------------------------------------------------------------------\t\t\t\n\n"
-//                + "\t\t\t\tJSR Bus Ticketing Serivce\t\t\t\t\n"
-//                + "\t\t\t\tPassenger name: " + spo.getCName() + "\t\t\t\t"
-//                + "\n\t\t\t\tContact no: " + spo.getCContact() + "\t\t\t\t\n"
-//                + "\t\t\t\tDate Issued: " + this.time_t + "\t\t\t\t\n"
-//                + "\t\t\t\tBus Name: " + spo.getBusName() + " - " + spo.busCode + "\t\t\t\t\n"
-//                + "\t\t\t\t" + spo.getCFrom() + " - " + spo.getCTo() + "\t\t\t\t\n"
-//                + "\t\t\t\tTravel Date: " + spo.getDate() + "\t\t\t\t\n"
-//                + "\t\t\t\tFare: Tk. " + spo.busFare + "\t\t\t\t\n"
-//                + "\t\t\t\tSeat No: " + spo.seatNo + "\t\t\t\t\n\n"
-//                + "\t\t\t------------------------------------------------------------------\t\t\t");
-//
-//        PrintWriter out = new PrintWriter(ticketName);
-//        out.println("\t\t\t------------------------------------------------------------------\t\t\t\n"
-//                + "\t\t\t\tJSR Bus Ticketing Serivce\t\t\t\t\n"
-//                + "\t\t\t\tPassenger name: " + super.getCName() + "\t\t\t\t"
-//                + "\n\t\t\t\tContact no: " + super.getCContact() + "\t\t\t\t\n"
-//                + "\t\t\t\tDate Issued: " + this.time_t + "\t\t\t\t\n"
-//                + "\t\t\t\tBus Name: " + super.getBusName() + " - " + super.busCode + "\t\t\t\t\n"
-//                + "\t\t\t\t" + super.getCFrom() + " - " + super.getCTo() + "\t\t\t\t\n"
-//                + "\t\t\t\tTravel Date: " + super.getDate() + "\t\t\t\t\n"
-//                + "\t\t\t\tFare: Tk. " + this.busFare + "\t\t\t\t\n"
-//                + "\t\t\t\tSeat No: " + this.seatNo + "\t\t\t\t\n");
-//        out.close();
-//    }
-
+        String fileName = spo.getCName() + spo.getCContact() + toDate(System.currentTimeMillis()) + ".txt";
+        System.out.println("FileName:  " + fileName);
+        String dirName = "C:\\Users\\USER\\JavaPractice\\BusTicketManagement\\tickets";
         try
         {
-            File myFile = new File("amarfileTest.txt");
+            File dir = new File(dirName);
+            File myFile = new File(dirName, fileName);
             if (myFile.createNewFile())
             {
                 System.out.println("File Created: " + myFile.getName());
@@ -94,13 +61,23 @@ public class Tickets extends SelectPromptOption
                 System.out.println("File Doesn't EXISTS!");
             }
             //Creating an object of FileWriter
-            FileWriter myFileWriter = new FileWriter("amarfile.txt");
-            myFileWriter.write("Created from program!\nNew Line.HelloProgram");
+            FileWriter myFileWriter = new FileWriter(myFile);
+            myFileWriter.write("\t\t\t------------------------------------------------------------------\t\t\t\n\n"
+                    + "\t\t\t\tJSR Bus Ticketing Serivce\t\t\t\t\n"
+                    + "\t\t\t\tPassenger name: " + spo.getCName() + "\t\t\t\t"
+                    + "\n\t\t\t\tContact no: " + spo.getCContact() + "\t\t\t\t\n"
+                    + "\t\t\t\tDate Issued: " + toDate(System.currentTimeMillis()) + "\t\t\t\t\n"
+                    + "\t\t\t\tBus Name: " + spo.getBusName() + " - " + spo.busCode + "\t\t\t\t\n"
+                    + "\t\t\t\t" + spo.getCFrom() + " - " + spo.getCTo() + "\t\t\t\t\n"
+                    + "\t\t\t\tTravel Date: " + spo.getDate() + "\t\t\t\t\n"
+                    + "\t\t\t\tFare: Tk. " + spo.busFare + "\t\t\t\t\n"
+                    + "\t\t\t\tSeat No: " + spo.seatNo + "\t\t\t\t\n\n"
+                    + "\t\t\t------------------------------------------------------------------\t\t\t");
             myFileWriter.close();
             System.out.println("File size in bytes: " + myFile.length());
         } catch (IOException e)
         {
-            System.out.println("Error");
+            System.out.println("Error: " + e);
         }
     }
 

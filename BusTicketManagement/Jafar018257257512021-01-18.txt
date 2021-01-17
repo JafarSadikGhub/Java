@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Jafar				
+				Contact no: 01825725751				
+				Date Issued: 2021-01-18				
+				Bus Name: ENA - 400tk				
+				Khulna - Dhaka				
+				Travel Date: 12/2/2021				
+				Fare: Tk. 400tk				
+				Seat No: 25				
+
+			------------------------------------------------------------------			

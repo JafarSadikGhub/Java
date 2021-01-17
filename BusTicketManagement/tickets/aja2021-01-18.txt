@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: a				
+				Contact no: ja				
+				Date Issued: 2021-01-18				
+				Bus Name: SR Travels - 500tk 				
+				Dhaka - Sylhet				
+				Travel Date: 12-13-17				
+				Fare: Tk. 500tk 				
+				Seat No: 27				
+
+			------------------------------------------------------------------			
