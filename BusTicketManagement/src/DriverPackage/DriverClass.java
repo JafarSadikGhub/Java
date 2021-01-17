@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import seller.SelectPromptOption;
+import seller.Tickets;
 
 /**
  *
@@ -25,6 +26,7 @@ public class DriverClass
         String fixedPWD = "qwerty1234";
         String cName, cContact, cFrom, cTo, date, time;
         SelectPromptOption spo = new SelectPromptOption();
+        Tickets t1 = new Tickets();
 
         while (true)
         {
@@ -85,7 +87,6 @@ public class DriverClass
                 System.out.println("Please Enter a date you want to travel: ");
                 date = input.nextLine();
                 spo.setDate(date);
-
                 System.out.println("Select the seat number(1-50): ");
                 String seat = input.nextLine();
                 spo.setSeatNo(seat);
@@ -94,7 +95,7 @@ public class DriverClass
                 confirm = input.nextLine();
                 if (confirm.equals("y") || confirm.equals("Y"))
                 {
-                    //Code for print ticket
+                    t1.makePrintableTicket(spo);
                 } else
                 {
                     break;
