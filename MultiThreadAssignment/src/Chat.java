@@ -1,101 +1,85 @@
 
-public class Chat
-{
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-    boolean flag = false;
-
-    public synchronized void Question(String msg)
-    {
-        if (flag)
-        {
-            try
-            {
-                wait();
-
-            } catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-        }
-        System.out.println(msg);
-        flag = true;
-        notifyAll();
-    }
-
-    public synchronized void Answer(String msg)
-    {
-        if (!flag)
-        {
-            try
-            {
-                wait();
-            } catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-        }
-        System.out.println(msg);
-        flag = false;
-        notifyAll();
-    }
-}
-
-class T1 implements Runnable
-{
-
-    Chat m;
-    String[] s1 =
-    {
-        "1Hi", "1Asho", "1Jao"
-    };
-
-    public T1(Chat m1)
-    {
-        this.m = m1;
-        new Thread(this, "Question").start();
-    }
-
-    public void run()
-    {
-        for (int i = 0; i < s1.length; i++)
-        {
-            m.Question(s1[i]);
-        }
-    }
-}
-
-class T2 implements Runnable
-{
-
-    Chat m;
-    String[] s2 =
-    {
-        "2Hello", "2Ashlam", "2gelam"
-    };
-
-    public T2(Chat m2)
-    {
-        this.m = m2;
-        new Thread(this, "Answer").start();
-    }
-
-    public void run()
-    {
-        for (int i = 0; i < s2.length; i++)
-        {
-            m.Question(s2[i]);
-        }
-    }
-}
-
-class TestThread
+class Application
 {
 
     public static void main(String[] args)
     {
-        Chat m = new Chat();
-        new T1(m);
-        new T2(m);
+        final Chat chat = new Chat();
+
+        chat.registerUser(new User("user1", chat));
+        chat.registerUser(new User("user2", chat));
+        chat.registerUser(new User("user3", chat));
+    }
+
+}
+
+class Chat
+{
+
+    private final Scanner scanner = new Scanner(System.in);
+    private final List<User> users = new ArrayList<>();
+
+    void registerUser(User user)
+    {
+        users.add(user);
+        user.start();
+    }
+
+    public void sendMessage(User user)
+    {
+        final String reply = scanner.nextLine();
+        System.out.format("%s: %s\n", user, reply);
+
+        if (reply.equalsIgnoreCase("stop"))
+        {
+            users.forEach(Thread::interrupt);
+            System.out.println("The chat is over.");
+        } else
+        {
+            notifyAll();
+        }
+    }
+
+}
+
+class User extends Thread
+{
+
+    private final String id;
+    private final Chat chat;
+
+    public User(String id, Chat chat)
+    {
+        this.id = id;
+        this.chat = chat;
+    }
+
+    public void run()
+    {
+        while (true)
+        {
+            try
+            {
+                synchronized (chat)
+                {
+                    chat.sendMessage(this);
+                    chat.wait();
+                }
+            } catch (InterruptedException e)
+            {
+                throw new IllegalArgumentException("This chat is finished.");
+            }
+        }
+    }
+
+    @Override
+    public String toString()
+    {
+        return id;
     }
 
 }
