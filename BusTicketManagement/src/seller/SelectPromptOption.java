@@ -288,9 +288,9 @@ public class SelectPromptOption
                     && (nextLine[columnIndexOfTime].matches(this.time))
                     && (nextLine[columnIndexOfBusName].matches(this.busName)))
             {
-                if (!busInfoBusCode.contains(nextLine[6]))
+                if (!busInfoBusCode.contains(nextLine[3]))
                 {
-                    busInfoBusCode.add(nextLine[6]);
+                    busInfoBusCode.add(nextLine[3]);
                     //System.out.println("here");
                 }
             }

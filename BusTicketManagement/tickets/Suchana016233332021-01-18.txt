@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Suchana				
+				Contact no: 01623333				
+				Date Issued: 2021-01-18				
+				Bus Name: Sky Line - 013SK				
+				Dhaka - Ctg				
+				Travel Date: 12/11/21				
+				Fare: Tk. 700tk				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

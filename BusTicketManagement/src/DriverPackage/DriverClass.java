@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import seller.IndividualBusFile;
 import seller.SelectPromptOption;
 import seller.Tickets;
 
@@ -19,7 +20,7 @@ public class DriverClass
 
     public static void main(String[] args) throws IOException, FileNotFoundException, CsvValidationException
     {
-
+        IndividualBusFile.createNewBus();
         //getBusInformationList();
         Scanner input = new Scanner(System.in);
         String adminPWD = " ";
