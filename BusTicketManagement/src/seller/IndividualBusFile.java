@@ -19,7 +19,7 @@ import java.util.List;
 public class IndividualBusFile
 {
 
-    public static void createNewBus() throws IOException
+    public static void createNewBus(SelectPromptOption spo) throws IOException
     {
         //Instantiating the CSVWriter class
         CSVWriter writer = new CSVWriter(new FileWriter("C:\\Users\\USER\\JavaPractice\\BusTicketManagement\\Busses\\busses.csv"));

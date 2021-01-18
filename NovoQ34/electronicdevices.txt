@@ -1,0 +1,8 @@
+Name: Smartphone
+Price: 70000.0 
+Model: OP7P
+Warranty: 2yrs
+Name: Smartphone
+Price: 122000.0 
+Model: IPhone12ProMax
+Warranty: 2yrs

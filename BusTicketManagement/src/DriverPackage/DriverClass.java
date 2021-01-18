@@ -20,7 +20,6 @@ public class DriverClass
 
     public static void main(String[] args) throws IOException, FileNotFoundException, CsvValidationException
     {
-        IndividualBusFile.createNewBus();
         //getBusInformationList();
         Scanner input = new Scanner(System.in);
         String adminPWD = " ";

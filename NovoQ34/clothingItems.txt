@@ -1,0 +1,6 @@
+Name: hoodie
+Price: 700.0 
+Fabric Type: 100% Cotton
+Name: Jacket
+Price: 12000.0 
+Fabric Type: 100% Lather
