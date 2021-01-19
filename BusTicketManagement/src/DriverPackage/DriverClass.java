@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import seller.AddNewBus;
+import seller.Bus;
 import seller.IndividualBusFile;
 import seller.SelectPromptOption;
 import seller.Tickets;
@@ -25,9 +27,15 @@ public class DriverClass
         String adminPWD = " ";
         String fixedPWD = "qwerty1234";
         String cName, cContact, cFrom, cTo, date, time;
+
         SelectPromptOption spo = new SelectPromptOption();
         IndividualBusFile ibf = new IndividualBusFile();
         Tickets t1 = new Tickets();
+        String busID = "", busName = "", destination = "", startingTime = "", busRoute = "";
+        int fare = 0;
+        String startingLocation = "";
+
+        AddNewBus anb = new AddNewBus(busID, busName, startingLocation, destination, fare, startingTime, busRoute);
 
         while (true)
         {
@@ -45,7 +53,25 @@ public class DriverClass
                 if (adminPWD.equals(fixedPWD))
                 {
                     System.out.println("Access granted!");
-                    //Some code, will implement later;
+                    while (true)
+                    {
+                        System.out.println("Press 1 to add new bus, press 2 to get revenue information of busses."
+                                + "\nPress 0 to exit this admin panel");
+                        String in = input.nextLine();
+                        if (in.equals("1"))
+                        {
+                            System.out.println("Here");
+                            anb.takeInput();
+                            anb.addNewBus();
+                        } else if (in.equals("2"))
+                        {
+                            //
+                        } else if (in.equals("0"))
+                        {
+                            break;
+                        }
+                    }
+
                 } else
                 {
                     System.out.println("Wrong Input!\nYou are exiting this program.");
