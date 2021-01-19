@@ -31,34 +31,18 @@ public class IndividualBusFile
         File dir = new File(dirName);
         File myCSVFile = new File(dirName, busName);
 
-        CSVWriter writer = new CSVWriter(new FileWriter(myCSVFile));
-        //Writing data to a csv file
-        String line1[] =
-        {
-            "Date", "Seat", "Passenger Name", "Contact"
-        };
-        String line2[] =
-        {
-            // "1", "Krishna", "2548", "2012-01-01", "IT"
-            spo.getDate(), spo.getSeatNo(), spo.getCName(), spo.getCContact()
-        };
-//        String line3[] =
-//        {
-//            "2", "Vishnu", "4522", "2013-02-26", "Operations"
-//        };
-//        String line4[] =
-//        {
-//            "3", "Raja", "3021", "2016-10-10", "HR"
-//        };
-//        String line5[] =
-//        {
-//            "4", "Raghav", "6988", "2012-01-01", "IT"
-//        };
-        //Writing data to the csv file
-        writer.writeNext(line1);
-        writer.writeNext(line2);
+        CSVWriter writer = new CSVWriter(new FileWriter(myCSVFile, true));
 
-        //Flushing data from writer to file
+//        List<String[]> data = new ArrayList<>();
+//        data.add(new String[]
+//        {
+//            spo.getDate(), spo.getSeatNo(), spo.getCName(), spo.getCContact()
+//        });
+        String[] record = (spo.getDate() + "," + spo.getSeatNo() + "," + spo.getCName() + "," + spo.getCContact()).split(",");
+
+        //writer.writeAll(data);
+        writer.writeNext(record);
+        //writer.writeNext();
         writer.flush();
         System.out.println("Data entered");
     }

@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Riya				
+				Contact no: 222				
+				Date Issued: 2021-01-20				
+				Bus Name: Saudia Paribahan - 041SA				
+				Dhaka - Khulna				
+				Travel Date: 21/3/27				
+				Fare: Tk. 400tk  				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

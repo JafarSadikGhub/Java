@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: b				
+				Contact no: b				
+				Date Issued: 2021-01-20				
+				Bus Name: Sky Line - 011SK				
+				Dhaka - Ctg				
+				Travel Date: 2				
+				Fare: Tk. 700tk				
+				Seat No: 5				
+
+			------------------------------------------------------------------			

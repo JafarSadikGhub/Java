@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Khan Ashrabi				
+				Contact no: 019200000				
+				Date Issued: 2021-01-19				
+				Bus Name: National Travels - 082NT				
+				Comilla - Dhaka				
+				Travel Date: 21/01/2021				
+				Fare: Tk. 200tk				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

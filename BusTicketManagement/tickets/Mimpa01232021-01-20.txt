@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Mimpa				
+				Contact no: 0123				
+				Date Issued: 2021-01-20				
+				Bus Name: Padma Enterprise - 084EN				
+				Khulna - Dhaka				
+				Travel Date: 21/22/23				
+				Fare: Tk. 450tk				
+				Seat No: 2				
+
+			------------------------------------------------------------------			
