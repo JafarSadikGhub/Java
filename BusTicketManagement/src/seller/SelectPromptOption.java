@@ -25,6 +25,7 @@ public class SelectPromptOption
     private static int index;
 
     Scanner input = new Scanner(System.in);
+
     String adminPWD = " ";
     String fixedPWD = "qwerty1234";
     String cName, cContact, date, time, busName, busCode;
@@ -112,6 +113,11 @@ public class SelectPromptOption
     public String getSeatNo()
     {
         return this.seatNo;
+    }
+
+    public String getBusCode()
+    {
+        return this.busCode;
     }
 
     public void readFileFrom() throws IOException

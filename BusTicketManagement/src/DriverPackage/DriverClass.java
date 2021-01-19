@@ -26,6 +26,7 @@ public class DriverClass
         String fixedPWD = "qwerty1234";
         String cName, cContact, cFrom, cTo, date, time;
         SelectPromptOption spo = new SelectPromptOption();
+        IndividualBusFile ibf = new IndividualBusFile();
         Tickets t1 = new Tickets();
 
         while (true)
@@ -97,6 +98,7 @@ public class DriverClass
                 if (confirm.equals("y") || confirm.equals("Y"))
                 {
                     t1.makePrintableTicket(spo);
+                    IndividualBusFile.createNewBus(spo);
                 } else
                 {
                     break;
