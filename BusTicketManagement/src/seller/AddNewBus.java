@@ -26,9 +26,15 @@ public class AddNewBus extends Bus
     public void addNewBus() throws IOException
     {
         File busList = new File("BusList.csv");
-        CSVWriter writer = new CSVWriter(new FileWriter(busList, true));
-        String[] record = (this.getStartingLocation() + "," + this.getDestination() + "," + this.getBusRoute() + "," + this.getBusID() + this.getBusName()
-                + this.getStartingTime() + this.getFare()).split(",");
+        CSVWriter writer = new CSVWriter(new FileWriter(busList, true),
+                CSVWriter.DEFAULT_SEPARATOR,
+                CSVWriter.NO_QUOTE_CHARACTER,
+                CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+                CSVWriter.RFC4180_LINE_END);
+
+        String[] record = (this.getStartingLocation() + "," + this.getDestination() + "," + this.getBusRoute() + ","
+                + this.getBusID() + "," + this.getBusName() + ","
+                + this.getStartingTime() + "," + this.getFare()).split(",");
         writer.writeNext(record);
         writer.flush();
         System.out.println("New Bus Added");

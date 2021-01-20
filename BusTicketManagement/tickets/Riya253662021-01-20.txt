@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Riya				
+				Contact no: 25366				
+				Date Issued: 2021-01-20				
+				Bus Name: Salsabil - 0181SA				
+				Dhaka - Narayanganj				
+				Travel Date: 12/12/21				
+				Fare: Tk. 50				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

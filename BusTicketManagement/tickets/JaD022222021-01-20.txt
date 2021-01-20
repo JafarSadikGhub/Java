@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: JaD				
+				Contact no: 02222				
+				Date Issued: 2021-01-20				
+				Bus Name: Silkcity - 0131SC				
+				Dinajpur - Dhaka				
+				Travel Date: 21/2/21				
+				Fare: Tk. 700				
+				Seat No: 5				
+
+			------------------------------------------------------------------			

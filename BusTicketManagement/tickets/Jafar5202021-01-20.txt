@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Jafar				
+				Contact no: 520				
+				Date Issued: 2021-01-20				
+				Bus Name: Royal Coach - 072RO				
+				Ctg - Dhaka				
+				Travel Date: 21/7/21				
+				Fare: Tk. 700				
+				Seat No: 5				
+
+			------------------------------------------------------------------			

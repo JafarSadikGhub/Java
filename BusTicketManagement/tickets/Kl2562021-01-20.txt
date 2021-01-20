@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Kl				
+				Contact no: 256				
+				Date Issued: 2021-01-20				
+				Bus Name: Green Line - 033GR				
+				Barishal - Dhaka				
+				Travel Date: 21/2/27				
+				Fare: Tk. 850tk				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

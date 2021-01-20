@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author JrBcrypted Md. Jafar Sadik ID: 1620660042
+ * @author Md. Jafar Sadik ID: 1620660042 Rafsina Osman Riya 1611446042
  */
 public class SelectPromptOption
 {
@@ -88,6 +88,16 @@ public class SelectPromptOption
     public String getCContact()
     {
         return this.cContact;
+    }
+
+    public String getBusFare()
+    {
+        return busFare;
+    }
+
+    public void setBusFare(String busFare)
+    {
+        this.busFare = busFare;
     }
 
     public String getDate()
@@ -269,7 +279,7 @@ public class SelectPromptOption
         for (int i = 0; i < size; i++)
         {
             this.busFare = busInfoBusFare.get(i);
-            System.out.println("Fare: " + busInfoBusFare.get(i) + "\nConfirm[Y / N] ?");
+            System.out.println("Fare: " + busInfoBusFare.get(i));
 
         }
 

@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Suchana				
+				Contact no: 0182				
+				Date Issued: 2021-01-20				
+				Bus Name: Padma Enterprise - 084EN				
+				Khulna - Dhaka				
+				Travel Date: 21/2/12				
+				Fare: Tk. 450				
+				Seat No: 2				
+
+			------------------------------------------------------------------			

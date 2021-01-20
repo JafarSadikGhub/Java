@@ -7,7 +7,7 @@ package seller;
 
 /**
  *
- * @author JrBcrypted Md. Jafar Sadik ID: 1620660042
+ * @author Md. Jafar Sadik ID: 1620660042 Rafsina Osman Riya 1611446042
  */
 public class Bus
 {

@@ -10,12 +10,14 @@ import java.util.Scanner;
 import seller.AddNewBus;
 import seller.Bus;
 import seller.IndividualBusFile;
+import seller.Revenue;
 import seller.SelectPromptOption;
 import seller.Tickets;
 
 /**
  *
- * @author JrBcrypted Md. Jafar Sadik ID: 1620660042
+ * @authors Md. Jafar Sadik ID: 1620660042 Sadiat Jahan Mimpa 1612807042 Rafsina
+ * Osman Riya 1611446042
  */
 public class DriverClass
 {
@@ -63,9 +65,12 @@ public class DriverClass
                             System.out.println("Here");
                             anb.takeInput();
                             anb.addNewBus();
+
                         } else if (in.equals("2"))
                         {
-                            //
+                            int rev = Revenue.getRevenue();
+                            System.out.println("Total Revenue so far: " + rev);
+
                         } else if (in.equals("0"))
                         {
                             break;
@@ -120,7 +125,9 @@ public class DriverClass
                 spo.setSeatNo(seat);
 
                 String confirm = null;
+                System.out.println("\nConfirm[Y / N] ?");
                 confirm = input.nextLine();
+
                 if (confirm.equals("y") || confirm.equals("Y"))
                 {
                     t1.makePrintableTicket(spo);
