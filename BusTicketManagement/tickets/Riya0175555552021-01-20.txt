@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: Riya				
+				Contact no: 017555555				
+				Date Issued: 2021-01-20				
+				Bus Name: Dhaka Express - 051DH				
+				Dhaka - Rajshahi				
+				Travel Date: 22/01/2021				
+				Fare: Tk. 600				
+				Seat No: 30				
+
+			------------------------------------------------------------------			
