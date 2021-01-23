@@ -100,7 +100,22 @@ public class ExceptionCondition extends Person
 
     }
 
-    public ExceptionCondition(String firstname, String lastName, String nationalId, String contactNo, String gender, int age, Address address, double height, double weight, String bloodGroup)
+    public boolean isNullData()
+    {
+        boolean ret = false;
+        if (super.getFirstname() != null && super.getLastName() != null && super.getNationalId() != null
+                && super.getContactNo() != null && super.getGender() != null && super.getAddress() != null && super.getBloodGroup() != null)
+
+        {
+            ret = false;
+        } else
+        {
+            ret = true;
+        }
+        return ret;
+    }
+
+    public ExceptionCondition(String firstname, String lastName, String nationalId, String contactNo, String gender, int age, Address address, double height, double weight, String bloodGroup) throws NullDataException
     {
         super(firstname, lastName, nationalId, contactNo, gender, age, address, height, weight, bloodGroup);
     }

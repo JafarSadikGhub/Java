@@ -104,9 +104,13 @@ public class Person extends HomoSapiens
     @Override
     public String toString()
     {
-        return "Person{" + "firstname=" + firstname + ", lastName=" + lastName
-                + ", nationalId=" + nationalId
-                + ", contactNo=" + contactNo + ", gender=" + gender + ", age=" + age + ", address=" + address + '}';
+
+        String s = "============================================================================================\n "
+                + "Full Name: " + firstname + " " + lastName + "\nNational ID: " + nationalId + "\nAddress: " + getAddress().getHouseNumber() + ", " + getAddress().getRoadNumber() + ", " + getAddress().getLocation()
+                + "\nGender: " + gender + "\nHeight: " + super.getHeight() + "\nWeight: " + super.getWeight()
+                + "\nAge:  " + age + " years" + "\nContact No: " + contactNo + "\nBlood Group: " + super.getBloodGroup()
+                + "\n============================================================================================";
+        return s;
     }
 
 }
