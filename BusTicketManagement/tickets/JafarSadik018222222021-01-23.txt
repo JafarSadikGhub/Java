@@ -1,0 +1,13 @@
+			------------------------------------------------------------------			
+
+				JSR Bus Ticketing Serivce				
+				Passenger name: JafarSadik				
+				Contact no: 01822222				
+				Date Issued: 2021-01-23				
+				Bus Name: Hanif - 018HA				
+				Dhaka - Ctg				
+				Travel Date: 24/01/21				
+				Fare: Tk. 900				
+				Seat No: 8				
+
+			------------------------------------------------------------------			
