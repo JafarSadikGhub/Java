@@ -7,9 +7,14 @@
 /**
  *
  * @author JrBcrypted
-*  Md. Jafar Sadik
-*  ID: 1620660042
+ *  Md. Jafar Sadik
+ *  ID: 1620660042
  */
-public class InvalidBloodGroupException {
+public class InvalidBloodGroupException extends Exception
+{
 
+    InvalidBloodGroupException(String s)
+    {
+        super(s);
+    }
 }

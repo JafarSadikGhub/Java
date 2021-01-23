@@ -7,9 +7,14 @@
 /**
  *
  * @author JrBcrypted
-*  Md. Jafar Sadik
-*  ID: 1620660042
+ *  Md. Jafar Sadik
+ *  ID: 1620660042
  */
-public class NullDataException {
+public class NullDataException extends Exception
+{
 
+    NullDataException(String s)
+    {
+        super(s);
+    }
 }

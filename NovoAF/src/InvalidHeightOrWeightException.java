@@ -7,9 +7,14 @@
 /**
  *
  * @author JrBcrypted
-*  Md. Jafar Sadik
-*  ID: 1620660042
+ *  Md. Jafar Sadik
+ *  ID: 1620660042
  */
-public class InvalidHeightOrWeightException {
+public class InvalidHeightOrWeightException extends Exception
+{
 
+    InvalidHeightOrWeightException(String s)
+    {
+        super(s);
+    }
 }

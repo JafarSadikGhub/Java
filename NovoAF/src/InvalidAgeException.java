@@ -7,9 +7,15 @@
 /**
  *
  * @author JrBcrypted
-*  Md. Jafar Sadik
-*  ID: 1620660042
+ *  Md. Jafar Sadik
+ *  ID: 1620660042
  */
-public class InvalidAgeException {
+public class InvalidAgeException extends Exception
+{
+
+    InvalidAgeException(String s)
+    {
+        super(s);
+    }
 
 }

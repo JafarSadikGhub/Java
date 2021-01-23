@@ -18,14 +18,42 @@ public class Person extends HomoSapiens
     private Address address;
 
     public Person(String firstname, String lastName, String nationalId,
-            String contactNo, String gender, int age, Address address,
-            double height, double weight, String bloodGroup) throws NullDataException
+            String cnt, String gender, int age, Address address,
+            double height, double weight, String bloodGroup) throws InvalidHeightOrWeightException,
+            InvalidBloodGroupException, NullDataException, InvalidNameException,
+            InvalidAgeException, InvalidContactNumberException, InvalidGenderException
     {
         super(height, weight, bloodGroup);
+        if (firstname.length() < 4)
+        {
+            throw new InvalidNameException("First name cannot be less than 4 characters!");
+        }
+        if (lastName.length() < 4)
+        {
+            throw new InvalidNameException("Last name cannot be less than 4 characters!");
+        }
+        if (age <= 0)
+        {
+            throw new InvalidAgeException("Age cannot be less than or equal to zero");
+        }
+        if (cnt.charAt(0) != '+' || cnt.charAt(1) != '8' || cnt.charAt(2) != '8' || cnt.charAt(3) != '0' || cnt.length() != 14)
+        {
+            throw new InvalidContactNumberException("Contact Number should have 14 char long,"
+                    + "\nand starting 4 char should be +880");
+        }
+        if (!gender.equals("MALE") && !gender.equals("FEMALE"))
+        {
+            throw new InvalidGenderException("Gender either should have MALE or FEMALE");
+        }
+        if (firstname == null || lastName == null || nationalId == null || cnt == null || gender == null || String.valueOf(age) == null
+                || address == null)
+        {
+            throw new NullDataException("One of the data maybe null!");
+        }
         this.firstname = firstname;
         this.lastName = lastName;
         this.nationalId = nationalId;
-        this.contactNo = contactNo;
+        this.contactNo = cnt;
         this.gender = gender;
         this.age = age;
         this.address = address;
@@ -105,7 +133,7 @@ public class Person extends HomoSapiens
     public String toString()
     {
 
-        String s = "============================================================================================\n "
+        String s = "============================================================================================\n"
                 + "Full Name: " + firstname + " " + lastName + "\nNational ID: " + nationalId + "\nAddress: " + getAddress().getHouseNumber() + ", " + getAddress().getRoadNumber() + ", " + getAddress().getLocation()
                 + "\nGender: " + gender + "\nHeight: " + super.getHeight() + "\nWeight: " + super.getWeight()
                 + "\nAge:  " + age + " years" + "\nContact No: " + contactNo + "\nBlood Group: " + super.getBloodGroup()

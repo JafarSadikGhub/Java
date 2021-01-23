@@ -7,9 +7,14 @@
 /**
  *
  * @author JrBcrypted
-*  Md. Jafar Sadik
-*  ID: 1620660042
+ *  Md. Jafar Sadik
+ *  ID: 1620660042
  */
-public class InvalidContactNumberException {
+public class InvalidContactNumberException extends Exception
+{
 
+    InvalidContactNumberException(String s)
+    {
+        super(s);
+    }
 }
